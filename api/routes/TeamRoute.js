@@ -1,7 +1,7 @@
-
 'use strict';
+
 module.exports = function(app) {
-  var teamController = require('../controllers/TeamController');
+  const teamController = require('../controllers/TeamController');
 
     app.route('/Teams/:EndPoint')
     .post(teamController.PostToTeams);
