@@ -4,7 +4,13 @@ A stub to send MS teams notifications via the internal proxy. This is so interna
 
 First thing I've ever written in Node.js, any advice on what's right/wrong is much appreciated.
 
-Firstly, if you want to use https, create a subfolder called "keys" and place them in there. Refer to the server.js file for indications as to what they should contain. If you don't want to use HTTPS, then comment these lines out from server.js
+QUICK START
+Unzip the package, change the line in the api/controllers/TeamControllers.js to refer to your particular proxy
+const proxy = 'http://proxy:8080';
+and start with "node server.js"
+
+But if you want more...
+If you want to use https, create a subfolder called "keys" and place them in there. Refer to the server.js file for indications as to what they should contain. If you don't want to use HTTPS, then comment these lines out from server.js
 
     https = require("https"),
     ....
