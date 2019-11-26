@@ -40,3 +40,4 @@ You can now do the following in Powershell and notice the psdev should match the
  
     PS> Invoke-WebRequest -uri "https://yourinternalURL:3000/Teams/psdev" -Headers @{"Content-Type"="application/json"} -body '{"Outage!" : "Server status, 11/01/19","Text" : "The following servers were found to be down this morning @ 8am","Facts" : {"server1": "DOWN!","server2":"DOWN!"}}' -Method POST
 
+If you want to use a module to send messages instead of rolling your own, try https://github.com/mhouston100/PSMicrosoftTeams or https://github.com/EvotecIT/PSTeams
