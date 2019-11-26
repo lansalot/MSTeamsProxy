@@ -40,6 +40,6 @@ You can now do the following in Powershell and notice the psdev should match the
  
     PS> Invoke-WebRequest -uri "https://yourinternalURL:3000/TeamsPassThru/psdev" -Headers @{"Content-Type"="application/json"} -body '{"Outage!" : "Server status, 11/01/19","Text" : "The following servers were found to be down this morning @ 8am","Facts" : {"server1": "DOWN!","server2":"DOWN!"}}' -Method POST
 
-The TeamsPassThru takes output from a module such as the below, straight through, no mangingling. Looking back, I don't think I ever did anything with the "not straight through" option...
+The /TeamsPassThru route takes output from a module such as the below, straight through, no mangingling - the assumption is you've already rolled your own JSON, most likely with a module (below). The /Teams route, you assemble your own JSON string first and then pass that. There's an example JSON string in the code for PostToTeams function in the TeamController.js - but to be honest, you're far better off using the TeamsPassThru route, and a module.
 
-If you want to use a module to send messages instead of rolling your own, try https://github.com/mhouston100/PSMicrosoftTeams or https://github.com/EvotecIT/PSTeams
+Talking of which, try https://github.com/mhouston100/PSMicrosoftTeams or https://github.com/EvotecIT/PSTeams to roll your cards, throw the output at TeamsPassThru and save a lot of trouble.
